@@ -1,0 +1,1 @@
+Olá seja Bem-Vindo ao meu primeiro repositório, nele eu irei disponibilizar aqui no GitHub, todos os exercícios que estou realizando na minha formação de Desenvolvedor Full Stach da Trybe, fico feliz em poder compartilhar minha evolução com você!
