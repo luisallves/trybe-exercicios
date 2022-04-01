@@ -2,8 +2,12 @@
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8">
-    <title>HTML</title>
-    <style>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet" media="all">
+    <style>      
+  
+    body{
+      font-family: Montserrat,sans-serif;
+    }
 
       h1 {
         font-size: 65px;
@@ -15,17 +19,35 @@
       }
 
       .modifyBg {
+        background-color: rgb(136, 255, 0);
+        font-weight: bold;
+        font-style: italic;
+        line-height: 20px;
+        text-align: center;
+        text-decoration: none;
+      }
+      
+      #yelow-line{
+        background-color: yellow;
+      }
+
+      #red-line{
+        background-color: red;
+      }
+
+      #brown-line {
         background-color: brown;
       }
+
     </style>
   </head>
   <body>
     <h1>Exercícios 3.2</h1>
     <p class="modifyBg">Qual é a sua cor favorita?</p>
     <ul class="modifyBg">
-      <li>Amarelo</li>
-      <li>Vermelho</li>
-      <li>Marrom</li>
+      <li id="yelow-line">Amarelo</li>
+      <li id="red-line">Vermelho</li>
+      <li id="brown-line">Marrom</li>
     </ul>
   </body>
 </html>
