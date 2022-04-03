@@ -1,0 +1,17 @@
+h1, p {
+    text-align: center;
+}
+
+ol:hover, ul:hover {
+    background-color: beige;
+    list-style: none;
+}
+li:active {
+    color: #7777ff;
+    font-family: Helvetica,sans-serif;
+    font-size: 15px;
+}
+
+li { 
+    list-style: none;
+}
