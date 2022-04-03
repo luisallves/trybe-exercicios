@@ -14,6 +14,8 @@ div:hover {
   
   div:nth-of-type(3) {
     background-color: #480ca8;
+    padding: 05px;
+    margin-top: 0px;
   }
   
   div:nth-of-type(4) {
