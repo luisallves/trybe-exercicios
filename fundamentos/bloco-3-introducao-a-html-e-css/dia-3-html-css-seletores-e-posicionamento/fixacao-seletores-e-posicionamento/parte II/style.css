@@ -1,0 +1,46 @@
+
+div:hover{
+    border: black 1px solid;
+}
+
+.cor-primaria{
+    background-color: #023e8a;
+}
+.cor-primaria h3{
+    color: white;
+    font-style: italic;
+}
+
+.cor-secundaria{
+    background-color: #ffba08;
+}
+.cor-secundaria h3{
+    color: #343a40;
+}
+
+.cor-complementar{
+    background-color: #9c6644;
+}
+.cor-complementar h3{
+    color: wheat;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    font-size: 30px;
+    font-style: italic;
+}
+
+.cor-escura{
+    background-color: #343a40;
+}
+.cor-escura h3{
+    color: white;
+}
+
+.cor-clara{
+    background-color: #ade8f4;
+}
+.cor-clara h3{
+    color: #023e8a;
+    font-style: italic;
+}
