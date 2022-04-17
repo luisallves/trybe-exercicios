@@ -13,9 +13,14 @@ let info = {
 info['recorrente'] = 'Sim';
 // console.log(info);
 
-// Exercício 03
+
 
 for (key in info) {
-  console.log(key);
+  // console.log(key);
 };
 
+// Exercício 04
+
+for (key in info) {
+  console.log(info[key])
+};
