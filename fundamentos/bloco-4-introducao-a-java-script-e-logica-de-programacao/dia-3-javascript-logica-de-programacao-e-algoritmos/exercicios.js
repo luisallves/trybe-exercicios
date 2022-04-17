@@ -30,4 +30,30 @@ for (index in word){
   invertedWord = word[index] + invertedWord;
 }
 // Criar um console.log para revelar a palavra invertida
-console.log(invertedWord);
+// console.log(invertedWord);
+
+// -------------------------------------------------------------------------
+
+// Algoritmo 03
+
+// Definir a array de string que será analisada pelo meu algoritimo
+let array = ['java', 'javascript', 'python', 'html', 'css'];
+// Definir uma variável que irá guardar a maior palavra, ela deve ter seu valor inicial igual ao primeiro valor da array, para evitar uma quebra de codigo caso minha array contenha apenas ma palavra
+let biggestWord = array[0];
+// Definir uma variável que irá guardar a menor palavra, ela deve ter seu valor inicial igual ao primeiro valor da array, para evitar uma quebra de codigo caso minha array contenha apenas ma palavra 
+let smallestWord = array[0];
+// Criar meu primeiro loop, que irá buscar a maior palavra da array inicial e atribuir o resultado a minha variável 'biggestWord'
+for (index in array) {
+  if (array[index].length > biggestWord.length) {
+    biggestWord = array[index];
+  }
+};
+// Criar meu segundo loop, que irá buscar a menor palavra da array inicial e atribuir o resultado a minha variável 'smallestWord'
+for (index in array) {
+  if (array[index].length < smallestWord.length) {
+    smallestWord = array[index];
+  }
+};
+// Criar dois console.log para retornar a maior e a menor palavra da minha array inicial
+console.log('A maior palavra do array é ' + biggestWord);
+console.log('A menor palavra do array é ' + smallestWord);
