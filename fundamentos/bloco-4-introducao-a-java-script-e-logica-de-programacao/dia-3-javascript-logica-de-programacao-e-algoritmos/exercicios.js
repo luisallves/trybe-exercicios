@@ -5,7 +5,7 @@ let number = 10;
 // Criar uma array contendo todos os numeros que o loop encontrar, contendo o numero em questão
 let decrement = [number];
 // Criar um loop que irá decrementar o valor da variável em questão, até que o o velor seja igual a '1'
-for (i = 1; i < number; i += 1) {
+for (let i = 1; i < number; i += 1) {
   decrement.push(number-i);
 };
 // criar uma variável que guarde o valor do resultado das multiplicações do próximo loop
@@ -55,5 +55,30 @@ for (index in array) {
   }
 };
 // Criar dois console.log para retornar a maior e a menor palavra da minha array inicial
-console.log('A maior palavra do array é ' + biggestWord);
-console.log('A menor palavra do array é ' + smallestWord);
+// console.log('A maior palavra do array é ' + biggestWord);
+// console.log('A menor palavra do array é ' + smallestWord);
+
+// -------------------------------------------------------------------------
+
+// Algoritmo 04
+
+// Criar uma variável que irá guardar o maior número primo encontrado 
+let biggestPrimeNumber = 0;
+// Criar loop com condicionais que acrescenta o numero que atende aos requisitos, à minha variável 'primeNumbers'
+for (let currentNumber = 0; currentNumber <= 50; currentNumber += 1) {
+  // define que o número inicialmente é primo.
+  let isPrime = true; 
+  // Cria um novo for que define divisores para dividir o 'currentNumber'
+  for (let currentDivisor = 2; currentDivisor < currentNumber; currentDivisor += 1) { 
+    //define uma condicional que divide o numero em questão por um numero menor, e se essa divisão for de resto 0, transforma no numero em não primo
+    if (currentNumber % currentDivisor === 0) { 
+      isPrime = false;
+    }
+  }
+  //Agora fora do loop, define uma condicional que se 'true' é definido como o maior primo. A final, o ultimo primo encontrado no intervalo de fato é o maior possível
+  if (isPrime) { 
+    biggestPrimeNumber = currentNumber;
+  }
+}
+
+console.log(biggestPrimeNumber);
