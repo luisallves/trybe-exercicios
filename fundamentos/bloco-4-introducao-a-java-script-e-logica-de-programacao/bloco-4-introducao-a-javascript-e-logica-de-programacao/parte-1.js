@@ -40,8 +40,25 @@ for (key in info) {
     info[key] === 'Sim' &&
     info2[key] === 'Sim'
   ) {
-    console.log('Ambos recorrentes');
+    // console.log('Ambos recorrentes');
   } else {
-    console.log(info[key] + ' e ' + info2[key]);
+    // console.log(info[key] + ' e ' + info2[key]);
   }
 };
+
+// Exercício 06
+
+let leitor = {
+  nome: 'Julia',
+  sobrenome: 'Pessoa',
+  idade: 21,
+  livrosFavoritos: [
+    {
+      titulo: 'O Pior Dia de Todos',
+      autor: 'Daniela Kopsch',
+      editora: 'Tordesilhas',
+    },
+  ],
+};
+
+console.log('O livro favorito de ' + leitor.nome + ' ' + leitor.sobrenome + ' se chama "' + leitor.livrosFavoritos[0].titulo + '".')
