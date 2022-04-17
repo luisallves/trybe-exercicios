@@ -11,4 +11,11 @@ let info = {
 // Exercício 02
 
 info['recorrente'] = 'Sim';
-console.log(info);
+// console.log(info);
+
+// Exercício 03
+
+for (key in info) {
+  console.log(key);
+};
+
