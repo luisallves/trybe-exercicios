@@ -112,3 +112,32 @@ function createDaysOfTheMonth() {
 };
 createDaysOfTheMonth();
 //CHAMA A FUNÇÃO CRIADA
+
+
+
+// Exercício 2:
+
+function createHolidayButton(buttonName) {
+//Cria uma função que recebe como parametro uma string que será ultilizada para servir de nome para o botão;
+
+  let buttonContainer = document.querySelector('.buttons-container');
+  //Pega o endereço do elemento com a classe 'buttons-countainer' e atribui a variavel 'buttonContainer';
+
+  let newButton = document.createElement('button');
+  //atribui a criação de um elemento 'button' à variável 'newButton';
+
+  let newButtonID = 'btn-holiday';
+  //atribui a string "btn-holiday" à variável "newButtonID";
+
+  newButton.innerHTML = buttonName;
+  //define o innerHTML do elemento criado como a string que a função ;recebe
+
+  newButton.id = newButtonID;
+  //atribui ao id do elemento criado o valor da variável "newButtonID";
+
+  buttonContainer.appendChild(newButton);
+  //acrescenta o elemento criado como filho de buttonContainer;
+};
+
+createHolidayButton('Feriados');
+//Chama a função criada, com a string 'Feriados';
