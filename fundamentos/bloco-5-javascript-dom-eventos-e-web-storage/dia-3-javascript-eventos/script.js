@@ -141,3 +141,201 @@ function createHolidayButton(buttonName) {
 
 createHolidayButton('Feriados');
 //Chama a função criada, com a string 'Feriados';
+
+
+
+//Exercício 3:
+
+function displayHolidays() {
+//Cria uma função que não recebe nenhum parametro;
+
+  let getHolidayButton = document.querySelector('#btn-holiday');
+  //atribui o endereço do elemento com o 'id' 'btn-holiday';
+
+  let getHolidays = document.querySelectorAll('.holiday')
+  //atribui o endereço do elemento com a 'classe' 'holiday';
+
+  let backgroundColor = 'rgb(238,238,238)';
+  //define uma cor em RGB à variável 'backgroundColor';
+
+  let setNewColor = 'white';
+  //define a cor branca à variável 'setNewColor';
+
+
+  getHolidayButton.addEventListener('click', function() {
+  //cria uma escuta para um evento "click" que quando ocorrer chama a function que ele mesmo define;
+
+    for (let index = 0; index < getHolidays.length; index += 1) {
+    //cria um looping para percorrer toda a array formada por elementos que possuem a classe 'holiday';
+
+      if (getHolidays[index].style.backgroundColor === setNewColor) {
+      //abre uma condicional que verifica se o elemento que está na array "getHolidays" possui o backgroundColor igual ao conteúdo da variável 'setNewColor';
+
+        getHolidays[index].style.backgroundColor = backgroundColor;
+        //Se sim, atribui o valor da variavel "backgroundColor" à cor de fundo do elemento posicionado na posição index da array;
+
+      } else {
+        getHolidays[index].style.backgroundColor = setNewColor;
+        //se não, define a cor do fundo do elemento para o conteúdo da var "setNewColor";
+      }
+    }
+  })
+};
+
+displayHolidays();
+//Chama a função;
+
+// Exercício 4:
+
+function createFridayButton(buttonName) {
+  let buttonContainer = document.querySelector('.buttons-container');
+  let newButton = document.createElement('button');
+  let newButtonID = 'btn-friday';
+
+  newButton.innerHTML = buttonName;
+  newButton.id = newButtonID;
+  buttonContainer.appendChild(newButton);
+};
+
+createFridayButton('Sexta-feira');
+
+// Exercício 5:
+
+function displayFridays(fridaysArray) {
+  let getFridayButton = document.querySelector('#btn-friday');
+  let fridays = document.getElementsByClassName('friday');
+  let newFridayText = 'SEXTOU o/';
+
+  getFridayButton.addEventListener('click', function() {
+  for (let index = 0; index < fridays.length; index += 1) {
+    if (fridays[index].innerHTML !== newFridayText) {
+        fridays[index].innerHTML = newFridayText;
+    } else {
+        fridays[index].innerHTML = fridaysArray[index];
+      }
+    }
+  })
+};
+
+let dezFridays = [ 4, 11, 18, 25 ];
+displayFridays(dezFridays);
+
+// Exercício 6:
+
+function dayMouseOver() {
+  let days = document.querySelector('#days');
+
+  days.addEventListener('mouseover', function(event) {
+    event.target.style.fontSize = '30px';
+    event.target.style.fontWeight = '600';
+  })
+};
+
+function dayMouseOut() {
+  let days = document.querySelector('#days');
+
+  days.addEventListener('mouseout', function(event) {
+    event.target.style.fontWeight = '200';
+    event.target.style.fontSize = '20px';
+  })
+};
+
+dayMouseOver();
+dayMouseOut();
+
+// Exercício 7:
+
+function newTaskSpan(task) {
+
+  let tasksContainer = document.querySelector('.my-tasks');
+  let taskName = document.createElement('span');
+
+  taskName.innerHTML = task;
+  tasksContainer.appendChild(taskName);
+};
+
+newTaskSpan('Projeto:');
+
+// Exercício 8:
+
+function newTaskDiv(color) {
+
+  let tasksContainer = document.querySelector('.my-tasks');
+  let newTask = document.createElement('div');
+
+  newTask.className = 'task';
+  newTask.style.backgroundColor = color;
+  tasksContainer.appendChild(newTask);
+};
+
+newTaskDiv('green');
+
+// Exercício 9:
+
+function setTaskClass() {
+  let selectedTask = document.getElementsByClassName('task selected');
+  let myTasks = document.querySelector('.task');
+
+  myTasks.addEventListener('click', function(event) {
+    if (selectedTask.length === 0) {
+      event.target.className = 'task selected';
+    } else {
+      event.target.className = 'task';
+    }
+  });
+};
+
+setTaskClass();
+
+// Exercício 10:
+
+function setDayColor() {
+  let selectedTask = document.getElementsByClassName('task selected');
+  let days = document.querySelector('#days');
+  let taskDiv = document.querySelector('.task');
+  let taskColor = taskDiv.style.backgroundColor;
+  
+  days.addEventListener('click', function(event){
+    let eventTargetColor = event.target.style.color;
+    if (selectedTask.length > 0 && eventTargetColor !== taskColor) {
+      let color = selectedTask[0].style.backgroundColor;
+      event.target.style.color = color;
+    } else if (eventTargetColor === taskColor && selectedTask.length !== 0) {
+      event.target.style.color = 'rgb(119,119,119)';
+    }
+  });
+};
+
+setDayColor();
+
+// Bônus:
+
+function addNewTask() {
+  let getInputField = document.querySelector('#task-input');
+  let addInputButton = document.querySelector('#btn-add');
+  let getTaskList = document.querySelector('.task-list');
+
+  addInputButton.addEventListener('click', function() {
+    if (getInputField.value.length > 0) {
+      let newLi = document.createElement('li');
+      newLi.innerText = getInputField.value;
+
+      getTaskList.appendChild(newLi);
+      getInputField.value = '';
+    } else {
+      alert('Error: Digite ao menos 1 caractere.');
+    }
+  })
+
+  getInputField.addEventListener('keyup', function(event) {
+    if (event.key === 'Enter' && getInputField.value.length > 0) {
+      let newLi = document.createElement('li');
+      newLi.innerText = getInputField.value;
+
+      getTaskList.appendChild(newLi);
+      getInputField.value = '';
+    }
+  });
+};
+
+addNewTask();
