@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=], initial-scale=1.0">
+  <title>Exercícios 6.1</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Header da página</h1>
+  </header>
+  <main>
+    <form class="speaker-form" action="">
+      <div class="form-row">
+        <div class="line-content">
+          <label for="name">Nome: 
+          <input type="text" name="name" id="name" placeholder="digite seu nome aqui..." ></label>
+        </div>
+
+        <div class="line-content">
+          <label for="email">Email:
+          <input type="text" name="email" id="email" placeholder="digite seu email aqui..." ></label>
+        </div>
+
+        <div class="line-content">
+          <input type="radio" name="favorite-destination" id="city">
+          <label for="city">Cidade</label>
+          <input type="radio" name="favorite-destination" id="camp">
+          <label for="camp">Campo</label>
+          <input type="radio" name="favorite-destination" id="beach">
+          <label for="beach">Praia</label>
+          <input type="radio" name="favorite-destination" id="Mountain">
+          <label for="Mountain">Montanhas</label>
+        </div>
+
+        <div class="line-content">
+          <label for="reason">Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?
+            <textarea name="reason-why" id="reason" cols="30" rows="10" maxlength="500" placeholder="escreva aqui em até 500 catactéres..."></textarea>
+        </label>
+        </div>
+
+        <div class="line-content">
+          <label for="date-input">Data:
+            <input type="date">
+          </label>
+        </div>
+
+        <div class="line-content">
+          <input type="radio" name="radio-newsletter" id="newsletter">
+          <label for="newsletter">Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?</label><br>
+          <input type="radio" name="agree" id="agree">
+          <label for="agree">Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.</label>
+        </div>
+      </div>
+
+      <button type="submit" id="submit-button">Enviar</button>
+
+    </form>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
