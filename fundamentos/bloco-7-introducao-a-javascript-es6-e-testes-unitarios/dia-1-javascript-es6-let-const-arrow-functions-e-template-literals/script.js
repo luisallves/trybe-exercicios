@@ -21,10 +21,10 @@ const compararNumeros = (a, b) => a - b;
 
 // Seu código aqui.
 
-const sortOddsAndEvens = () => {
-    let sortedArray = oddsAndEvens.sort(compararNumeros);
+const sortOddsAndEvens = (array) => {
+    let sortedArray = array.sort(compararNumeros);
     let message = `Os números ${sortedArray} se encontram ordenados de forma crescente!`
     console.log(message);
 }
 
-sortOddsAndEvens(); // será necessário alterar essa linha 😉
+sortOddsAndEvens(oddsAndEvens);
