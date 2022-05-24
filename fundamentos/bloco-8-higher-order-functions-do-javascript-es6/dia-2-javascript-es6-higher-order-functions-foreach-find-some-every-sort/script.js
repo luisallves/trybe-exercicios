@@ -89,4 +89,14 @@ const bookName26crt = () => books.find((elemento) => elemento.name.length >= 26)
 
 // 4 - Ordene os livros por data de lançamento em ordem decrescente.
 const sortBooks = () => books.sort((a,b) => a.releaseYear - b.releaseYear).reverse();
-console.log(sortBooks());
+// console.log(sortBooks());
+
+// 🚀 5 - Faça uma função que retorne true, se todas as pessoas autoras nasceram no século XX, ou false, caso contrário.
+
+const everyoneWasBornOnSecXX = () => books.every((elemento) => elemento.author.   birthYear <= 2000 && elemento.author.birthYear >= 1901);
+// console.log(everyoneWasBornOnSecXX());
+
+// 🚀 6 - Faça uma função que retorne true, se algum livro foi lançado na década de 80, e false, caso contrário.
+
+const someBookWasReleaseOnThe80s = () => books.some((elemento) => elemento.releaseYear >= 1980 && elemento.releaseYear <= 1989);
+console.log(someBookWasReleaseOnThe80s());
