@@ -99,4 +99,20 @@ const everyoneWasBornOnSecXX = () => books.every((elemento) => elemento.author. 
 // 🚀 6 - Faça uma função que retorne true, se algum livro foi lançado na década de 80, e false, caso contrário.
 
 const someBookWasReleaseOnThe80s = () => books.some((elemento) => elemento.releaseYear >= 1980 && elemento.releaseYear <= 1989);
-console.log(someBookWasReleaseOnThe80s());
+// console.log(someBookWasReleaseOnThe80s());
+
+// 7 - Faça uma função que retorne true, caso nenhum author tenha nascido no mesmo ano, e false, caso contrário.
+
+// expectedResult = false;
+
+function authorUnique() {
+  let unico = true;
+  for (let i = 1; i < books.length; i += 1) {
+    let birthYear = books[i - 1].author.birthYear;
+    if (books[i].author.birthYear === birthYear) {
+      unico = false;
+    }
+  }
+  return unico;
+}
+console.log(authorUnique());
