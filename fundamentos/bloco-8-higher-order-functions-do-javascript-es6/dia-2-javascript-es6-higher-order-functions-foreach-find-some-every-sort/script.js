@@ -66,7 +66,7 @@ const books = [
 
 const authorBornIn1947 = () => books.find((elemento) => elemento.author.birthYear === 1947)
 
-console.log(authorBornIn1947());
+// console.log(authorBornIn1947());
 
 // 2 - Retorne o nome do livro de menor nome.
 // Dica: use a função forEach.
@@ -80,4 +80,13 @@ function smallerName() {
   });
   return nameBook;
 };
-console.log(smallerName());
+// console.log(smallerName());
+
+// 3 - Encontre o primeiro livro cujo nome possui 26 caracteres.
+
+const bookName26crt = () => books.find((elemento) => elemento.name.length >= 26);
+// console.log(bookName26crt());
+
+// 4 - Ordene os livros por data de lançamento em ordem decrescente.
+const sortBooks = () => books.sort((a,b) => a.releaseYear - b.releaseYear).reverse();
+console.log(sortBooks());
