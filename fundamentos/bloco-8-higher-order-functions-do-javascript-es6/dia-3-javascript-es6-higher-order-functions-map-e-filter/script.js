@@ -83,4 +83,13 @@ const oldBooksOrdered = () => books.filter((book) => 2022 - book.releaseYear > 6
 
 // 🚀 5 - Crie um array em ordem alfabética apenas com os nomes de todas as pessoas autoras de ficção científica ou fantasia.
 const fantasyOrScienceFictionAuthors = () => books.filter((book) =>  book.genre === 'Ficção Científica' || book.genre === 'Fantasia').map((book) => book.author.name).sort();
-console.log(fantasyOrScienceFictionAuthors());
+// console.log(fantasyOrScienceFictionAuthors());
+
+// 🚀 6 - Crie um array com o nome de todos os livros com mais de 60 anos de publicação.
+const oldBooks = () => books.filter((book) => 2022 - book.releaseYear > 60).map((book) => book.name)
+// console.log(oldBooks());
+
+// 🚀 7 - Encontre o nome do livro escrito pela pessoa cujo nome registrado começa com três iniciais.
+// Dica: cada inicial termina com um ponto.
+const authorWith3DotsOnName = () => books.filter((book) =>  book.author.name.split('.').length === 4).map((book) => book.name)[0];
+console.log(authorWith3DotsOnName());
