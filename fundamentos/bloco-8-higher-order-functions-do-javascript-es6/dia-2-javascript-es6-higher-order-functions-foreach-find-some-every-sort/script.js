@@ -80,7 +80,7 @@ function smallerName() {
   });
   return nameBook;
 };
-// console.log(smallerName());
+console.log(smallerName());
 
 // 3 - Encontre o primeiro livro cujo nome possui 26 caracteres.
 
