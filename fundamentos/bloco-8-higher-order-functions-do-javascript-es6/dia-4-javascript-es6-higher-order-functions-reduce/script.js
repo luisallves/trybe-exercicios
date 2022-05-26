@@ -83,7 +83,7 @@ function reduceNames() {
 // console.log(reduceNames());
 
 //🚀 3- Calcule a média de idade que as pessoas autoras tinham quando seus respectivos livros foram lançados.
-const averageAge = () => books.reduce((acc, book) => acc + (book.releaseYear - book.author.birthYear), 0)/books.length;
+const averageAge = () => books.reduce((acc, book) => acc + (book.releaseYear - book.author.birthYear), 0) / books.length;
 // console.log(averageAge());
 
 // 🚀 4- Encontre o livro com o maior nome.
@@ -93,4 +93,9 @@ const longestNamedBook = () => books.reduce((biggestBook, currentBook) => {
   }
   return biggestBook;
 });
-console.log(longestNamedBook());
+// console.log(longestNamedBook());
+
+// 5 - Dada o array de nomes, retorne a quantidade de vezes em que aparecem a letra a maiúscula ou minúscula.
+const names = ['Aanemarie', 'Adervandes', 'Akifusa','Abegildo', 'Adicellia', 'Aladonata','Abeladerco', 'Adieidy', 'Alarucha'];
+const containsA = () => names.reduce((acc, word) => `${acc}${word}`).toLocaleLowerCase().split('').filter((letra)=>letra==='a').length;
+console.log(containsA());
