@@ -82,6 +82,15 @@ function reduceNames() {
 }
 // console.log(reduceNames());
 
-// 3 - Calcule a média de idade que as pessoas autoras tinham quando seus respectivos livros foram lançados.
+//🚀 3- Calcule a média de idade que as pessoas autoras tinham quando seus respectivos livros foram lançados.
 const averageAge = () => books.reduce((acc, book) => acc + (book.releaseYear - book.author.birthYear), 0)/books.length;
-console.log(averageAge());
+// console.log(averageAge());
+
+// 🚀 4- Encontre o livro com o maior nome.
+const longestNamedBook = () => books.reduce((biggestBook, currentBook) => {
+  if (currentBook.name.length > biggestBook.name.length) {
+    return currentBook;
+  }
+  return biggestBook;
+});
+console.log(longestNamedBook());
