@@ -1,0 +1,14 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "install",
+			"path": "bloco-10-introducao-a-react/dia-1-hello-world-no-react/exercicios-10-1",
+			"group": "build",
+			"problemMatcher": [],
+			"label": "npm: install - bloco-10-introducao-a-react/dia-1-hello-world-no-react/exercicios-10-1",
+			"detail": "install dependencies from package"
+		}
+	]
+}

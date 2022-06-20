@@ -7,6 +7,7 @@ class Compromissos extends React.Component {
       <ul className="lista-compromissos">Compromissos:
         {
           compromissos.map((compromisso, index) => <li key={`${compromisso}${index}`}>{compromisso}</li>)
+          
         }
       </ul>
     )
