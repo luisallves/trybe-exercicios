@@ -1,8 +1,9 @@
 import './App.css';
+import Pokedex from './components/Pokedex';
 
 function App() {
   return (
-    <h1>olá</h1>
+    <Pokedex/>
   );
 }
 
