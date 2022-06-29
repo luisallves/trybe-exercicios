@@ -1,0 +1,43 @@
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+
+}
+
+#root {
+  font-family: sans-serif;
+}
+
+.title{
+  text-align: center;
+  font-size: 50px;
+  margin: 20px;
+}
+
+.pokedex {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.pokemon-card {
+  display: flex;
+  flex-flow: row-reverse nowrap;
+  justify-content: space-between;
+  align-items: center;
+  border: rgb(126, 126, 126) 2px solid;
+  text-align: center;
+  width: 300px;
+  height: 100px;
+  padding: 20px;
+  border-radius: 6px;
+  margin: 5px
+}
+
+.pokemon-info {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+}
